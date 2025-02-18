@@ -1,5 +1,4 @@
 # Flutter View Modifiers Package
-# local_hero
 
 [![Pub][pub_badge]][pub]
 
