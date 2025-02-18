@@ -1,4 +1,7 @@
 # Flutter View Modifiers Package
+# local_hero
+
+[![Pub][pub_badge]][pub]
 
 ### Swift way of Writing flutter code
 
@@ -6,20 +9,20 @@
 to modify the appearance and behavior of widgets in a more readable and fluent way. It allows you
 to chain various modifiers on widgets such as padding, decoration, styling, animations, and more.
 
-## Features
+## Getting started
 
-- **Method Chaining**: Apply multiple modifiers on a widget in a fluent style.
-- **Widget Styling**: Easily modify text styles, colors, borders, shadows, etc.
-- **Animations**: Add opacity transitions and scaling effects.
-- **Custom Modifiers**: Easily extend widgets with custom modifiers like gradient decorations.
-
-## Installation
-
-Add the `flutter_view_modifiers` package to your `pubspec.yaml` file:
+In the `pubspec.yaml` of your flutter project, add the following dependency:
 
 ```yaml
 dependencies:
-  flutter_view_modifiers: ^latest_version
+  ...
+  flutter_view_modifiers:
+```
+
+In your library add the following import:
+
+```dart
+import 'package:flutter_view_modifiers/flutter_view_modifiers.dart';
 ```
 
 ## Example Usage
@@ -160,7 +163,11 @@ These extensions allow you to customize the appearance of widgets with various d
 **Example Usage:**
 
 ```dart
-widget.decorate(color: Colors.red, borderRadius: 10, boxShadow: [BoxShadow(color: Colors.black, blurRadius: 8)]);  // Add decorations
+widget.decorate(
+  color: Colors.red, 
+  borderRadius: 10, 
+  boxShadow: [BoxShadow(color: Colors.black, blurRadius: 8)],
+);  // Add decorations
 ```
 
 ### **6. Text Styling Modifiers** (Intermediate)
@@ -172,7 +179,11 @@ Apply custom text styles to any widget with text content.
 **Example Usage:**
 
 ```dart
-widget.textStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);  // Custom text styling
+widget.textStyle(
+  fontSize: 20, 
+  fontWeight: FontWeight.bold, 
+  color: Colors.white,
+);  // Custom text styling
 ```
 
 ### **7. Positioning Modifiers** (Intermediate)
@@ -184,7 +195,12 @@ These extensions allow precise positioning of widgets within a `Stack`.
 **Example Usage:**
 
 ```dart
-widget.positioned(top: 20, left: 10, width: 100, height: 50);  // Position inside Stack
+widget.positioned(
+  top: 20, 
+  left: 10, 
+  width: 100, 
+  height: 50,
+);  // Position inside Stack
 ```
 
 ### **8. Transformation Modifiers** (Advanced)
@@ -215,8 +231,16 @@ These extensions provide simple and flexible animations to widgets.
 **Example Usage:**
 
 ```dart
-widget.animatedContainer(duration: Duration(seconds: 1), color: Colors.blue);  // Animated Container
-widget.animatedCrossFade(firstChild: firstWidget, secondChild: secondWidget, duration: Duration(seconds: 2));  // Crossfade between two widgets
+widget.animatedContainer(
+  duration: Duration(seconds: 1), 
+  color: Colors.blue,
+);  // Animated Container
+
+widget.animatedCrossFade(
+  firstChild: firstWidget, 
+  secondChild: secondWidget, 
+  duration: Duration(seconds: 2),
+);  // Crossfade between two widgets
 ```
 
 ### **10. Overlay and Background Modifiers** (Advanced)
@@ -229,8 +253,12 @@ Add overlays or background elements to widgets for more complex layouts.
 **Example Usage:**
 
 ```dart
-widget.overlay(overlayWidget: Icon(Icons.star));  // Add an overlay
-widget.background(backgroundWidget: Container(color: Colors.red));  // Add a background
+widget.overlay(
+  overlayWidget: Icon(Icons.star),
+);  // Add an overlay
+widget.background(
+  backgroundWidget: Container(color: Colors.red),
+);  // Add a background
 ```
 
 ## Conclusion
@@ -238,3 +266,10 @@ widget.background(backgroundWidget: Container(color: Colors.red));  // Add a bac
 `flutter_view_modifiers` allows for a more intuitive and expressive way to style and manipulate widgets.
 With the flexibility of method chaining and a wide range of built-in modifiers, you can efficiently build
 beautiful, interactive UIs in Flutter.
+
+
+
+<!--Links-->
+[pub_badge]: https://img.shields.io/pub/v/local_hero.svg
+[pub]: https://pub.dev/packages/flutter_view_modifiers
+[changelog]: https://github.com/quickcodes/flutter_view_modifiers/blob/main/CHANGELOG.md

@@ -1,7 +1,7 @@
 name: flutter_view_modifiers
 description: "Swift way of Writing flutter code"
 version: 0.0.1
-homepage: https://github.com/yourusername/flutter_view_modifiers
+homepage: https://github.com/quickcodes/flutter_view_modifiers
 
 environment:
   sdk: '>=3.4.4 <4.0.0'
