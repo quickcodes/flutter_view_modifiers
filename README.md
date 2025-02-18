@@ -2,7 +2,7 @@
 
 [![Pub][pub_badge]][pub]
 
-### Swift way of Writing flutter code
+### Swift way of Writing Flutter code
 
 `flutter_view_modifiers` is a Flutter package that provides a set of convenient extension methods
 to modify the appearance and behavior of widgets in a more readable and fluent way. It allows you
