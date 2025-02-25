@@ -128,10 +128,10 @@ These extensions help in controlling the layout of a widget.
 - `aspectRatio`: Applies a specific aspect ratio to a widget.
 - `align`: Aligns a widget based on a given alignment.
 - `center`: Centers a widget within its parent.
-- `separator()`: Adds a separator of a given widget between widgets in a list.
-- `expanded()`: Expands a widget to fill the available space within a parent.
-- `flexible()`: Makes a widget flexible within a parent, allowing it to resize dynamically.
-- `withSize()`: Sets a specific width and height for a widget.
+- `separator`: Adds a separator of a given widget between widgets in a list.
+- `expanded`: Expands a widget to fill the available space within a parent.
+- `flexible`: Makes a widget flexible within a parent, allowing it to resize dynamically.
+- `withSize`: Sets a specific width and height for a widget.
 
 
 **Example Usage:**
