@@ -8,7 +8,7 @@
 to modify the appearance and behavior of widgets in a more readable and fluent way. It allows you
 to chain various modifiers on widgets such as padding, decoration, styling, animations, and more.
 
-![Alt text](assets/preview.png)
+![Alt text](assets/preview.png){height=700}
 
 ## Getting started
 
