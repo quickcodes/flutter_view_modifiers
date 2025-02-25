@@ -1,16 +1,16 @@
-# example
 
-A new Flutter project.
+# Getting started
 
-## Getting Started
+In the `pubspec.yaml` of your flutter project, add the following dependency:
 
-This project is a starting point for a Flutter application.
+```yaml
+dependencies:
+  ...
+  flutter_view_modifiers:
+```
 
-A few resources to get you started if this is your first Flutter project:
+In your library add the following import:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+import 'package:flutter_view_modifiers/flutter_view_modifiers.dart';
+```
