@@ -128,6 +128,11 @@ These extensions help in controlling the layout of a widget.
 - `aspectRatio`: Applies a specific aspect ratio to a widget.
 - `align`: Aligns a widget based on a given alignment.
 - `center`: Centers a widget within its parent.
+- `separator()`: Adds a separator of a given widget between widgets in a list.
+- `expanded()`: Expands a widget to fill the available space within a parent.
+- `flexible()`: Makes a widget flexible within a parent, allowing it to resize dynamically.
+- `withSize()`: Sets a specific width and height for a widget.
+
 
 **Example Usage:**
 
@@ -135,6 +140,46 @@ These extensions help in controlling the layout of a widget.
 widget.aspectRatio(16 / 9);  // Apply aspect ratio 16:9
 widget.align(alignment: Alignment.topLeft);  // Align to top-left
 widget.center();  // Center the widget
+
+Column(
+  children: [
+    Text("Foo"),
+    Text("Bar"),
+    Text("Bam"),
+  ].separator(10.0.height()),
+)
+
+Row(
+  children: [
+    Text("Left").expanded(),
+    Text("Right").expanded(),
+  ],
+)
+
+Container(color: Colors.red).withSize(width: 100, height: 50);
+
+Row(
+  children: [
+    Text("Flexible Left").flexible(),
+    Text("Flexible Right").flexible(),
+  ],
+)
+
+Column(
+  children: [
+    Text("Foo"),
+    Text("Bar"),
+    Text("Bam"),
+  ].separator(
+    Row(
+      children: [
+        Divider().expanded(),
+        Text("Divider"),
+        Divider().expanded(),
+      ],
+    ),
+  ),
+)
 ```
 
 ### **4. Gesture Handlers** (Intermediate)
@@ -143,6 +188,7 @@ Add gesture recognition to widgets like tap, long press, and pan.
 
 - `onTap`: Adds a tap gesture handler to the widget.
 - `onTapRipple`: Adds a ripple effect (InkWell) on tap.
+- `onTapBounce`: Adds a bounce effect on tap.
 - `onLongPress`: Handles long press gestures.
 - `onPanUpdate`: Handles pan (drag) gestures.
 
@@ -150,7 +196,28 @@ Add gesture recognition to widgets like tap, long press, and pan.
 
 ```dart
 widget.onTap(() => print('Tapped!'));  // Handle tap gesture
+
+widget.onLongPress(() => print('LongPress!'));  // Handle tap gesture
+
 widget.onTapRipple(onTap: () => print('Tapped with Ripple'));  // Ripple on tap
+
+widget.onTapBounce(  // Bounce effect on tap
+  onTap: () => print('Bounceable Tap!'), 
+  onTapUp: (details) => print('Tap Released!'),
+  onTapDown: (details) => print('Tap Started!'),
+  onTapCancel: () => print('Tap Cancelled!'),
+  onLongPress: () => print('Long Pressed!'),
+  scaleFactor: 0.85,
+  duration: Duration(milliseconds: 150),
+  reverseDuration: Duration(milliseconds: 150),
+  curve: Curves.easeOut,
+  reverseCurve: Curves.easeIn,
+);
+
+widget.onPanUpdate(onPanUpdate: (details) {
+  print('Panning with delta: ${details.delta}');
+});
+
 ```
 
 ### **5. Decoration Modifiers** (Intermediate)

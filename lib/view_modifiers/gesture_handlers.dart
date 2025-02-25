@@ -1,6 +1,7 @@
 // gesture_handlers.dart
 
 import 'package:flutter/material.dart';
+import 'package:flutter_view_modifiers/view_modifiers/helpers/bounce.dart';
 
 /// Gesture Handlers (Tap, Long Press, etc.)
 ///
@@ -44,6 +45,46 @@ extension WidgetGestureHandler on Widget {
   Widget onPanUpdate({required Function(DragUpdateDetails) onPanUpdate}) {
     return GestureDetector(
       onPanUpdate: onPanUpdate,
+      child: this,
+    );
+  }
+
+
+  /// Adds a bounceable effect when tapped.
+  ///
+  /// [onTap] The callback function to execute when the widget is tapped.
+  /// [onTapUp] The callback function to execute when tap is released.
+  /// [onTapDown] The callback function to execute when tap is initiated.
+  /// [onTapCancel] The callback function to execute when tap is cancelled.
+  /// [onLongPress] The callback function to execute on long press.
+  /// [duration] The duration of the scaling animation when tapped.
+  /// [reverseDuration] The reverse duration of the scaling animation when released.
+  /// [curve] The animation curve.
+  /// [reverseCurve] The reverse animation curve.
+  /// [scaleFactor] The scale factor of the child widget.
+  Widget onTapBounce({
+    required VoidCallback onTap,
+    void Function(TapUpDetails)? onTapUp,
+    void Function(TapDownDetails)? onTapDown,
+    VoidCallback? onTapCancel,
+    VoidCallback? onLongPress,
+    Duration duration = const Duration(milliseconds: 200),
+    Duration reverseDuration = const Duration(milliseconds: 200),
+    Curve curve = Curves.decelerate,
+    Curve reverseCurve = Curves.decelerate,
+    double scaleFactor = 0.8,
+  }) {
+    return Bounceable(
+      onTap: onTap,
+      onTapUp: onTapUp,
+      onTapDown: onTapDown,
+      onTapCancel: onTapCancel,
+      onLongPress: onLongPress,
+      duration: duration,
+      reverseDuration: reverseDuration,
+      curve: curve,
+      reverseCurve: reverseCurve,
+      scaleFactor: scaleFactor,
       child: this,
     );
   }
