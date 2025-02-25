@@ -8,6 +8,8 @@
 to modify the appearance and behavior of widgets in a more readable and fluent way. It allows you
 to chain various modifiers on widgets such as padding, decoration, styling, animations, and more.
 
+![Alt text](assets/preview.png)
+
 ## Getting started
 
 In the `pubspec.yaml` of your flutter project, add the following dependency:
