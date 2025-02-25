@@ -1,4 +1,7 @@
 ## [0.0.4]
+- Demo Image Added
+
+## [0.0.4]
 - Minor Changes
 
 ## [0.0.3]
