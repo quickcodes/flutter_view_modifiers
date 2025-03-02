@@ -33,27 +33,6 @@ extension WidgetCenter on Widget {
 
 
 
-// Extension on double for SizedBox with width
-extension SizedBoxWidth on double {
-  Widget width() {
-    return SizedBox(width: this);
-  }
-}
-
-// Extension on double for SizedBox with height
-extension SizedBoxHeight on double {
-  Widget height() {
-    return SizedBox(height: this);
-  }
-}
-
-// Extension on double for SizedBox with width and height
-extension SizedBoxSize on double {
-  Widget size() {
-    return SizedBox(width: this, height: this);
-  }
-}
-
 /// Extension on List of Widgets to add separators.
 extension WidgetListExtension on List<Widget> {
   /// Inserts a separator widget between each item in the list.

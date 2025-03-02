@@ -1,6 +1,6 @@
 name: flutter_view_modifiers
 description: "Swift way of Writing flutter code"
-version: 0.0.5
+version: 0.0.6
 homepage: https://github.com/quickcodes/flutter_view_modifiers
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:

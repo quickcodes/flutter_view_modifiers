@@ -329,6 +329,136 @@ widget.background(
 );  // Add a background
 ```
 
+### String Extensions
+
+```dart
+final email = "test@example.com";
+print(email.isValidEmail); // true
+
+final name = "john doe";
+print(name.capitalize); // John doe
+print(name.titleCase); // John Doe
+
+final number = "123abc";
+print(number.digitsOnly); // 123
+
+final json = '{"key": "value"}';
+print(json.toBase64); // eyJrZXkiOiAidmFsdWUifQ==
+
+print("base64".toBase64); // YmFzZTY0
+print("YmFzZTY0".fromBase64); // base64
+
+print("This is too long text".ellipsize(10)); // This is...
+
+print("hello-world".toCamelCase); // HelloWorld
+
+print("flutter".reversed); // rettulf
+
+print("123".toInt()); // 123
+print("abc".toInt(fallback: 10)); // 10
+
+print("www.example.com".withPrefix("https://")); // https://www.example.com
+
+print("flutter".surround(left: "<", right: ">")); // <flutter>
+```
+
+### DateTime Extensions
+
+```dart
+
+final now = DateTime.now();
+
+// Check day types
+print(now.isWeekend); // true/false
+print(now.isWeekday); // true/false
+print(now.isToday); // true
+print(now.isYesterday); // false
+
+// Date shifting
+print(now.addDays(5)); // 5 days later
+print(now.subtractHours(3)); // 3 hours ago
+
+// Formatting
+print(now.format('dd/MM/yyyy')); // e.g., 02/03/2025
+
+// Relative time
+print(now.subtractHours(2).relativeTime); // "2 hours ago"
+
+// Start and end of periods
+print(now.startOfDay); // Today at 00:00
+print(now.endOfMonth); // Last second of the month
+
+// Difference
+print(now
+    .differenceInDays(DateTime.now().subtract(Duration(days: 10)))); // 10
+
+// ISO with milliseconds
+print(now.toIso8601WithMilliseconds);
+```
+
+
+### Num & Duration Extensions
+
+```dart
+print('+ wait for 2 seconds');
+await 2.delay();
+print('- 2 seconds completed');
+
+print('+ callback in 1.2sec');
+1.2.delay(() => print('- 1.2sec callback called'));
+
+// Duration shortcuts
+print(1.seconds + 200.milliseconds);
+print(1.hours + 30.minutes);
+print(1.5.hours);
+
+// Number comparisons
+print(5.isLowerThan(4)); // false
+print(5.isGreaterThan(4)); // true
+print(5.isEqual(4)); // false
+
+// Simple readable duration
+print(90.minutes.readable); // "1h 30m"
+
+// Chunked duration
+print(7.seconds.chunked(2.seconds)); // [2s, 2s, 2s]
+
+// Comparisons
+print(5.seconds.isShorterThan(10.seconds)); // true
+print(5.seconds.isLongerThan(2.seconds)); // true
+
+// Sleep inline
+await 2.seconds.sleep();
+
+// Throttle a callback
+2.seconds.throttle(() => print('Throttled!'));
+
+// Debounce a callback
+1.seconds.debounce(() => print('Debounced!'));
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Conclusion
 
 `flutter_view_modifiers` allows for a more intuitive and expressive way to style and manipulate widgets.
