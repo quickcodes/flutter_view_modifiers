@@ -9,7 +9,7 @@ extension WidgetRotation on Widget {
   /// Rotates the widget by a specified angle.
   ///
   /// [angle] The angle in radians to rotate the widget.
-  Widget rotate(double angle) {
+  Transform rotate(double angle) {
     return Transform.rotate(angle: angle, child: this);
   }
 }
@@ -23,7 +23,7 @@ extension WidgetOffset on Widget {
   ///
   /// [x] The translation along the X-axis.
   /// [y] The translation along the Y-axis.
-  Widget offset({double x = 0.0, double y = 0.0}) {
+  Transform offset({double x = 0.0, double y = 0.0}) {
     return Transform.translate(
       offset: Offset(x, y), // Apply translation along both axes
       child: this,
@@ -36,7 +36,7 @@ extension WidgetScale on Widget {
   /// Scales the widget by a specified factor.
   ///
   /// [scale] The scaling factor.
-  Widget scale(double scale) {
+  Transform scale(double scale) {
     return Transform.scale(scale: scale, child: this);
   }
 }
@@ -45,7 +45,7 @@ extension WidgetClipShape on Widget {
   /// Clips the widget into a shape (default is oval).
   ///
   /// [clipBehavior] The behavior to handle clipping.
-  Widget clipShape({Clip clipBehavior = Clip.antiAlias}) {
+  ClipOval clipShape({Clip clipBehavior = Clip.antiAlias}) {
     return ClipOval(
       clipBehavior: clipBehavior,
       child: this,
@@ -61,7 +61,7 @@ extension WidgetAnimatedOpacity on Widget {
   ///
   /// [opacity] The Opacity to handle opacity.
   /// [duration] The duration of animation
-  Widget animatedOpacity({double opacity = 1.0, Duration duration = const Duration(milliseconds: 300)}) {
+  AnimatedOpacity animatedOpacity({double opacity = 1.0, Duration duration = const Duration(milliseconds: 300)}) {
     return AnimatedOpacity(
       opacity: opacity,
       duration: duration,
@@ -70,7 +70,7 @@ extension WidgetAnimatedOpacity on Widget {
   }
 
 
-  Widget opacity([double opacity = 1.0]) {
+  Opacity opacity([double opacity = 1.0]) {
     /// Changes the opacity of Widget (default opacity:1.0).
     ///
     /// [opacity] The Opacity to handle opacity.
@@ -89,7 +89,7 @@ extension WidgetOverlay on Widget {
   /// [alignment] Optional parameter to specify the alignment of the overlay widget within the stack.
   /// [fit] Optional parameter to specify how the overlay widget should fit inside the stack.
   /// [clipBehavior] Optional parameter to specify how the stack clips its children.
-  Widget overlay({
+  Stack overlay({
     required Widget overlayWidget,
     AlignmentGeometry alignment = Alignment.center,
     StackFit fit = StackFit.loose,
@@ -117,7 +117,7 @@ extension WidgetBackground on Widget {
   /// [alignment] Optional parameter to specify the alignment of the background widget within the stack.
   /// [fit] Optional parameter to specify how the background widget should fit inside the stack.
   /// [clipBehavior] Optional parameter to specify how the stack clips its children.
-  Widget background({
+  Stack background({
     required Widget backgroundWidget,
     AlignmentGeometry alignment = Alignment.center,
     StackFit fit = StackFit.loose,

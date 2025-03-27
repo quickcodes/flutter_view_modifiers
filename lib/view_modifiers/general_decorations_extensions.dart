@@ -16,7 +16,7 @@ extension WidgetDecoration on Widget {
   /// [padding] Padding to be applied to the widget.
   /// [clipBehavior] How the widget's content should be clipped (default is `Clip.antiAlias`).
   /// [gradient] Gradient to be applied to the background.
-  Widget decorate({
+  DecoratedBox decorate({
     Color? color,
     double? borderWidth,
     Color? borderColor,
@@ -33,11 +33,14 @@ extension WidgetDecoration on Widget {
         border: borderWidth != null && borderColor != null
             ? Border.all(color: borderColor, width: borderWidth)
             : null,
-        borderRadius: borderRadius != null ? BorderRadius.circular(borderRadius) : null,
+        borderRadius:
+            borderRadius != null ? BorderRadius.circular(borderRadius) : null,
         boxShadow: boxShadow,
       ),
       child: ClipRRect(
-        borderRadius: borderRadius != null ? BorderRadius.circular(borderRadius) : BorderRadius.zero,
+        borderRadius: borderRadius != null
+            ? BorderRadius.circular(borderRadius)
+            : BorderRadius.zero,
         clipBehavior: clipBehavior,
         child: Padding(
           padding: padding ?? EdgeInsets.zero,
@@ -47,8 +50,6 @@ extension WidgetDecoration on Widget {
     );
   }
 }
-
-
 
 /// Text Extensions
 ///

@@ -10,7 +10,7 @@ extension WidgetGestureHandler on Widget {
   /// Adds a tap handler to the widget.
   ///
   /// [onTap] The callback function to execute when the widget is tapped.
-  Widget onTap(VoidCallback onTap) {
+  GestureDetector onTap(VoidCallback onTap) {
     return GestureDetector(
       onTap: onTap,
       child: this,
@@ -21,7 +21,7 @@ extension WidgetGestureHandler on Widget {
   ///
   /// [onTap] The callback function to execute when the widget is tapped.
   /// [borderRadius] The border radius for the ripple effect.
-  Widget onTapRipple({VoidCallback? onTap, BorderRadius? borderRadius}) {
+  InkWell onTapRipple({VoidCallback? onTap, BorderRadius? borderRadius}) {
     return InkWell(
       onTap: onTap,
       borderRadius: borderRadius ?? BorderRadius.zero,
@@ -32,7 +32,7 @@ extension WidgetGestureHandler on Widget {
   /// Adds a long press gesture handler to the widget.
   ///
   /// [onLongPress] The callback function to execute on long press.
-  Widget onLongPress(VoidCallback onLongPress) {
+  GestureDetector onLongPress(VoidCallback onLongPress) {
     return GestureDetector(
       onLongPress: onLongPress,
       child: this,
@@ -42,7 +42,7 @@ extension WidgetGestureHandler on Widget {
   /// Adds a pan update gesture handler to the widget.
   ///
   /// [onPanUpdate] The callback function to execute on pan updates.
-  Widget onPanUpdate({required Function(DragUpdateDetails) onPanUpdate}) {
+  GestureDetector onPanUpdate({required Function(DragUpdateDetails) onPanUpdate}) {
     return GestureDetector(
       onPanUpdate: onPanUpdate,
       child: this,

@@ -10,7 +10,7 @@ extension WidgetPositioned on Widget {
   ///
   /// [top], [bottom], [left], [right] - The positioning properties for the widget.
   /// [width], [height] - Optional width and height constraints for the widget.
-  Widget positioned({
+  Positioned positioned({
     double? top,
     double? bottom,
     double? left,

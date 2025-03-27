@@ -100,8 +100,8 @@ extension IntComparisonExtensions on num {
 
 extension SizedBoxExtensions on num {
   // Box shortcuts
-  Widget widthBox() => SizedBox(width: toDouble());
-  Widget heightBox() => SizedBox(height: toDouble());
-  Widget sizeBox() => SizedBox(width: toDouble(), height: toDouble());
+  SizedBox widthBox() => SizedBox(width: toDouble());
+  SizedBox heightBox() => SizedBox(height: toDouble());
+  SizedBox sizeBox() => SizedBox(width: toDouble(), height: toDouble());
 }
 
