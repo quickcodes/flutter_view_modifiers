@@ -31,8 +31,6 @@ extension WidgetCenter on Widget {
   }
 }
 
-
-
 /// Extension on List of Widgets to add separators.
 extension WidgetListExtension on List<Widget> {
   /// Inserts a separator widget between each item in the list.
@@ -43,7 +41,6 @@ extension WidgetListExtension on List<Widget> {
     return expand((widget) => [widget, separator]).toList()..removeLast();
   }
 }
-
 
 /// Extension to easily apply Flexible and Expanded widgets.
 extension FlexibleExpandedExtension on Widget {

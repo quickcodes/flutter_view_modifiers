@@ -329,7 +329,7 @@ widget.background(
 );  // Add a background
 ```
 
-### String Extensions
+## String Extensions
 
 ```dart
 final email = "test@example.com";
@@ -362,7 +362,7 @@ print("www.example.com".withPrefix("https://")); // https://www.example.com
 print("flutter".surround(left: "<", right: ">")); // <flutter>
 ```
 
-### DateTime Extensions
+## DateTime Extensions
 
 ```dart
 
@@ -397,7 +397,7 @@ print(now.toIso8601WithMilliseconds);
 ```
 
 
-### Num & Duration Extensions
+## Num & Duration Extensions
 
 ```dart
 print('+ wait for 2 seconds');

@@ -8,7 +8,8 @@ extension DateTimeExtensions on DateTime {
   static DateTime get now => DateTime.now();
 
   /// Yesterday's date
-  static DateTime get yesterday => DateTime.now().subtract(const Duration(days: 1));
+  static DateTime get yesterday =>
+      DateTime.now().subtract(const Duration(days: 1));
 
   /// Tomorrow's date
   static DateTime get tomorrow => DateTime.now().add(const Duration(days: 1));
@@ -47,10 +48,12 @@ extension DateTimeExtensions on DateTime {
   bool get isToday => isSameDate(DateTime.now());
 
   /// Is this date yesterday?
-  bool get isYesterday => isSameDate(DateTime.now().subtract(const Duration(days: 1)));
+  bool get isYesterday =>
+      isSameDate(DateTime.now().subtract(const Duration(days: 1)));
 
   /// Is this date tomorrow?
-  bool get isTomorrow => isSameDate(DateTime.now().add(const Duration(days: 1)));
+  bool get isTomorrow =>
+      isSameDate(DateTime.now().add(const Duration(days: 1)));
 
   /// Is the date the same as another date (ignores time)
   bool isSameDate(DateTime other) {
@@ -58,7 +61,8 @@ extension DateTimeExtensions on DateTime {
   }
 
   /// Is this a weekend? (Saturday or Sunday)
-  bool get isWeekend => weekday == DateTime.saturday || weekday == DateTime.sunday;
+  bool get isWeekend =>
+      weekday == DateTime.saturday || weekday == DateTime.sunday;
 
   /// Is this a weekday (Mon-Fri)?
   bool get isWeekday => !isWeekend;

@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 extension StringExtensions on String {
-  
   /// Check if string is null, empty or only whitespace
   bool get isNullOrEmpty => trim().isEmpty;
 
@@ -9,13 +8,15 @@ extension StringExtensions on String {
   bool get isNotEmptyOrNull => !isNullOrEmpty;
 
   /// Capitalize first letter
-  String get capitalize => isNullOrEmpty ? this : this[0].toUpperCase() + substring(1);
+  String get capitalize =>
+      isNullOrEmpty ? this : this[0].toUpperCase() + substring(1);
 
   /// Capitalize all words
   String get titleCase => split(' ').map((word) => word.capitalize).join(' ');
 
   /// Convert snake_case or kebab-case to camelCase
-  String get toCamelCase => split(RegExp(r'[_-]')).map((e) => e.capitalize).join('');
+  String get toCamelCase =>
+      split(RegExp(r'[_-]')).map((e) => e.capitalize).join('');
 
   /// Reverse the string
   String get reversed => split('').reversed.join();
@@ -36,7 +37,8 @@ extension StringExtensions on String {
   bool get isNumeric => double.tryParse(this) != null;
 
   /// Check if string is a valid email
-  bool get isValidEmail => RegExp(r"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").hasMatch(this);
+  bool get isValidEmail =>
+      RegExp(r"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").hasMatch(this);
 
   /// Check if string is a valid URL
   bool get isValidUrl => Uri.tryParse(this)?.hasAbsolutePath ?? false;
@@ -75,13 +77,15 @@ extension StringExtensions on String {
   }
 
   /// Add a prefix if missing
-  String withPrefix(String prefix) => startsWith(prefix) ? this : '$prefix$this';
+  String withPrefix(String prefix) =>
+      startsWith(prefix) ? this : '$prefix$this';
 
   /// Add a suffix if missing
   String withSuffix(String suffix) => endsWith(suffix) ? this : '$this$suffix';
 
   /// Surround string with quotes (or custom characters)
-  String surround({String left = '"', String right = '"'}) => '$left$this$right';
+  String surround({String left = '"', String right = '"'}) =>
+      '$left$this$right';
 
   /// Safe compare ignoring case
   bool equalsIgnoreCase(String other) => toLowerCase() == other.toLowerCase();

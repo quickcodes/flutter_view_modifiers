@@ -42,13 +42,13 @@ extension WidgetGestureHandler on Widget {
   /// Adds a pan update gesture handler to the widget.
   ///
   /// [onPanUpdate] The callback function to execute on pan updates.
-  GestureDetector onPanUpdate({required Function(DragUpdateDetails) onPanUpdate}) {
+  GestureDetector onPanUpdate(
+      {required Function(DragUpdateDetails) onPanUpdate}) {
     return GestureDetector(
       onPanUpdate: onPanUpdate,
       child: this,
     );
   }
-
 
   /// Adds a bounceable effect when tapped.
   ///

@@ -31,7 +31,6 @@ extension WidgetOffset on Widget {
   }
 }
 
-
 extension WidgetScale on Widget {
   /// Scales the widget by a specified factor.
   ///
@@ -53,22 +52,21 @@ extension WidgetClipShape on Widget {
   }
 }
 
-
-
 // Animated Opacity Extension
 extension WidgetAnimatedOpacity on Widget {
   /// Changes the opacity of Widget with Animation (default opacity:1.0, duration:Duration(milliseconds: 300)).
   ///
   /// [opacity] The Opacity to handle opacity.
   /// [duration] The duration of animation
-  AnimatedOpacity animatedOpacity({double opacity = 1.0, Duration duration = const Duration(milliseconds: 300)}) {
+  AnimatedOpacity animatedOpacity(
+      {double opacity = 1.0,
+      Duration duration = const Duration(milliseconds: 300)}) {
     return AnimatedOpacity(
       opacity: opacity,
       duration: duration,
       child: this,
     );
   }
-
 
   Opacity opacity([double opacity = 1.0]) {
     /// Changes the opacity of Widget (default opacity:1.0).

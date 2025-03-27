@@ -1,3 +1,6 @@
+## [0.0.8]
+- Code Formatting & Document updates.
+
 ## [0.0.7]
 - Added new Dynamic return types instead of widget.
 - Code Formatting.

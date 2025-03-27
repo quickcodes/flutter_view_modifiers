@@ -1,12 +1,8 @@
 name: flutter_view_modifiers
 # description: "Swift way of Writing flutter code"
-description: 
-  "A Flutter package that enhances widget flexibility with powerful extension methods. 
-  Effortlessly chain modifiers like padding, margin, alignment, decoration, and more 
-  for cleaner, readable, and maintainable code. Simplify your UI development with 
-  expressive and reusable modifiers."
+description: Adds powerful extensions to Flutter widgets, enabling cleaner, chainable modifiers for styling, layout, and animation.
 
-version: 0.0.7
+version: 0.0.8
 homepage: https://github.com/quickcodes/flutter_view_modifiers
 
 environment:

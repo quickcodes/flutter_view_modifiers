@@ -1,5 +1,3 @@
-
-
 // Extension on double for SizedBox with width
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -20,7 +18,6 @@ extension DurationExtensions on num {
 }
 
 extension DurationHelpers on Duration {
-  
   /// Converts this Duration to milliseconds (already exists in core, but for chaining clarity)
   int get inMilliseconds => this.inMilliseconds;
 
@@ -51,7 +48,8 @@ extension DurationHelpers on Duration {
     if (inHours.remainder(24) > 0) parts.add('${inHours.remainder(24)}h');
     if (inMinutes.remainder(60) > 0) parts.add('${inMinutes.remainder(60)}m');
     if (inSeconds.remainder(60) > 0) parts.add('${inSeconds.remainder(60)}s');
-    if (inMilliseconds.remainder(1000) > 0) parts.add('${inMilliseconds.remainder(1000)}ms');
+    if (inMilliseconds.remainder(1000) > 0)
+      parts.add('${inMilliseconds.remainder(1000)}ms');
     return parts.join(' ');
   }
 
@@ -90,8 +88,6 @@ extension DurationHelpers on Duration {
   bool get isNegative => inMilliseconds < 0;
 }
 
-
-
 extension IntComparisonExtensions on num {
   bool isLowerThan(num other) => this < other;
   bool isGreaterThan(num other) => this > other;
@@ -104,4 +100,3 @@ extension SizedBoxExtensions on num {
   SizedBox heightBox() => SizedBox(height: toDouble());
   SizedBox sizeBox() => SizedBox(width: toDouble(), height: toDouble());
 }
-
