@@ -2,7 +2,7 @@ name: flutter_view_modifiers
 # description: "Swift way of Writing flutter code"
 description: Adds powerful extensions to Flutter widgets, enabling cleaner, chainable modifiers for styling, layout, and animation.
 
-version: 0.0.8
+version: 0.0.9
 homepage: https://github.com/quickcodes/flutter_view_modifiers
 
 environment:

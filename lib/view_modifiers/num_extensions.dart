@@ -48,8 +48,9 @@ extension DurationHelpers on Duration {
     if (inHours.remainder(24) > 0) parts.add('${inHours.remainder(24)}h');
     if (inMinutes.remainder(60) > 0) parts.add('${inMinutes.remainder(60)}m');
     if (inSeconds.remainder(60) > 0) parts.add('${inSeconds.remainder(60)}s');
-    if (inMilliseconds.remainder(1000) > 0)
+    if (inMilliseconds.remainder(1000) > 0) {
       parts.add('${inMilliseconds.remainder(1000)}ms');
+    }
     return parts.join(' ');
   }
 
