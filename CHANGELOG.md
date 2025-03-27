@@ -1,3 +1,7 @@
+## [0.0.7]
+- Added new Dynamic return types instead of widget.
+- Code Formatting.
+
 ## [0.0.6]
 - Added new **Number Extensions** (int, double) for durations, comparisons, and utility methods.
 - Added new **Duration Extensions** for easier time handling and utility methods.

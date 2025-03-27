@@ -6,7 +6,7 @@ description:
   for cleaner, readable, and maintainable code. Simplify your UI development with 
   expressive and reusable modifiers."
 
-version: 0.0.6
+version: 0.0.7
 homepage: https://github.com/quickcodes/flutter_view_modifiers
 
 environment:
